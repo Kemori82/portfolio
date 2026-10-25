@@ -3,6 +3,12 @@
   "main": "worker.mjs",
   "compatibility_date": "2026-10-24",
   "workers_dev": true,
+  "routes": [
+    {
+      "pattern": "ethankreuzer.com",
+      "custom_domain": true
+    }
+  ],
   "d1_databases": [
     {
       "binding": "DB",
