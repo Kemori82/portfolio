@@ -4,10 +4,6 @@ A Cloudflare Worker hosting Ethan's landscape portfolio and its content editor.
 
 ## Editing the website
 
-Open https://ethankreuzer.com/admin and sign in with the admin password.
-Edit names, text, profile links, email addresses, cards, project details, or pictures, then choose **Save changes**. Changes appear immediately; GitHub builds are only needed for application-code changes.
-
-The editor also controls separate dark/light palettes, heading and body fonts, text sizes, page width, column layout and spacing, card corners, full-screen background pictures, paint and geometry intensity, animation, page labels, and browser metadata. Each card supports its own icon links (built-in icons, emoji, or uploaded images), height, text color, overlay, and picture crop. Open **Preview your draft** to see unsaved edits; then save to publish.
 
 Pictures are resized in your browser and stored in the Cloudflare D1 database. JPEG, PNG, and WebP are supported. Each uploaded result is capped at 900 KB; the picture library is capped at 50 MB. The editor can download a JSON content backup.
 
