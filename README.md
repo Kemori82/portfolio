@@ -28,7 +28,7 @@ Content and uploaded pictures live in D1 and are not overwritten by future code 
 
 ## Visual builder and pages
 
-In `/admin`, use **Visual builder → Arrange cards on canvas**, then **Preview your draft**. Drag a card's top handle to move it or its corner handle to resize it. The position inspector also accepts exact coordinates and sizes. Canvas width is 1200 design units; cards stack in saved order on phones. Bring in front / Send behind controls overlapping cards.
+In `/admin`, the page canvas is always visible. Drag any card's body to move it, or its corner handle to resize it; moving a card automatically switches that page to canvas layout. Click a card to edit it in the **Cards** sidebar. **Pages**, **Design**, and **Settings** organize the remaining controls. On narrow windows, use **Properties** to open or close the sidebar. Use **Preview** to test the page and **Edit** to arrange it. The position inspector also accepts exact coordinates and sizes. Canvas width is 1200 design units; cards stack in saved order on phones. Bring in front / Send behind controls overlapping cards.
 
 Select **Background: drag / scroll** to pan an uploaded background and scroll to zoom it. Precise X/Y, zoom, fit, and fixed/scrolling controls are in Background & display. Switch back to Cards & icons when finished. Drag icons in the preview to offset them; expand their editor rows for size, offsets, order, label, image, and destination. Rows can be dragged to reorder them, or moved with buttons.
 
@@ -36,4 +36,4 @@ Select **Background: drag / scroll** to pan an uploaded background and scroll to
 
 **Favicon & site tab data** uploads a favicon (converted to a transparent 128px PNG) and sets the default title and search description. Page-specific values override these defaults.
 
-Undo/Redo changes your draft. Save changes publishes it. Download backup / Import backup transfers drafts as JSON. An older editor tab is prevented from saving over the new page structure; download its draft, refresh, and import the backup if it contains unsaved edits.
+Undo/Redo changes your draft. Publish changes publishes it. Download backup / Import backup transfers drafts as JSON. An older editor tab is prevented from saving over the new page structure; download its draft, refresh, and import the backup if it contains unsaved edits.
