@@ -37,3 +37,16 @@ Select **Background: drag / scroll** to pan an uploaded background and scroll to
 **Favicon & site tab data** uploads a favicon (converted to a transparent 128px PNG) and sets the default title and search description. Page-specific values override these defaults.
 
 Undo/Redo changes your draft. Publish changes publishes it. Download backup / Import backup transfers drafts as JSON. An older editor tab is prevented from saving over the new page structure; download its draft, refresh, and import the backup if it contains unsaved edits.
+
+
+### Workspace controls
+
+The editor starts in dark mode. **Light editor** switches only the editing workspace, independently of your website colors. The preference is remembered on this browser.
+
+Drag the divider on the left edge of **Site tools** to resize the sidebar. Its keyboard control supports Left/Right (Shift for larger steps), Home, and End. **Hide toolbars** gives the canvas more room; **Show toolbars** restores them. Sidebar width and toolbar visibility are remembered locally.
+
+**Whole page** fits the complete page in the canvas. **Fit width** and **Desktop at 100%** zoom in for editing. **Website preview** opens your current draft without the editor UI; **Back to editor** returns to your work. It does not publish the draft.
+
+Use **Cards → Insert content** to add a picture, text section, downloadable file, or code block to the selected card’s popup. With no selection, a new card is created. Card background pictures remain editable under **Picture**. Code blocks display source as text with an optional language label. They do not run custom scripts. Downloads support PDF, text, Markdown, CSV, JSON, ZIP, and source files up to 900 KB each; larger files can use an external HTTPS link. Images and files share the 50 MB media library. Attachments are served as downloads.
+
+This release requires editor version 3 when publishing, to protect the new content fields from older open editor tabs. Export any unsaved draft using **File → Download backup**, refresh the admin page, then import it if needed.
