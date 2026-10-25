@@ -49,7 +49,7 @@ Drag the divider on the left edge of **Site tools** to resize the sidebar. Its k
 
 Use **Cards → Insert content** to add a picture, text section, downloadable file, or code block to the selected card’s popup. With no selection, a new card is created. Card background pictures remain editable under **Picture**. Code blocks display source as text with an optional language label. They do not run custom scripts. Downloads support PDF, text, Markdown, CSV, JSON, ZIP, and source files up to 900 KB each; larger files can use an external HTTPS link. Images and files share the 50 MB media library. Attachments are served as downloads.
 
-This release requires editor version 4 when publishing, to protect the new content fields from older open editor tabs. Export any unsaved draft using **File → Download backup**, refresh the admin page, then import it if needed.
+This release requires editor version 5 when publishing, to protect the new content fields from older open editor tabs. Export any unsaved draft using **File → Download backup**, refresh the admin page, then import it if needed.
 
 
 ### Zoom, shortcuts, and rich media
@@ -63,3 +63,12 @@ The picture pickers now accept animated GIFs up to 900 KB and preserve their fra
 For embeds, paste a YouTube, Vimeo, Spotify, or SoundCloud URL or the provider's iframe embed code. Only the iframe URL is used; arbitrary scripts and HTML are not run. Embed height is adjustable. Availability depends on the provider, the content owner's embed settings, and the visitor's browser.
 
 All uploads share the existing 50 MB library. Audio/video is split into small database rows and served with HTTP byte ranges to support seeking within the free Cloudflare setup. No additional hosting service or paid plan is required by this update.
+
+
+### Card covers and individual page designs
+
+Open a card and expand **Card media: picture, carousel, or video**. Choose a single picture, image carousel, or muted video backdrop. Carousels accept up to 20 pictures with descriptions, ordering, manual arrows, a play/pause control, and adjustable timing. Videos accept the existing 20 MB upload or direct HTTPS media URL and an optional poster image. Automatic playback is optional. The editor starts them paused; use the media controls or website preview to test them. Automatic animation respects the visitor's reduced-motion preference and the page's animation setting. Offscreen videos pause.
+
+**Design now edits only the page selected above the canvas.** Each page saves its own dark/light palette, background, typography, spacing, layout, animation preferences, and page text. Existing pages retain the previous site design until edited. New page designs start from the site's existing defaults. Duplicating a page copies its design, and restoring a design resets only that page. Name/footer and contact links in Settings remain shared across the site.
+
+The background has additional painted strokes and gently rippling circles. Paint strength and circle visibility are adjustable in the current page's Design tab. Disable **Enable animations & background ripples** to make that page static. Reduced-motion preferences also stop the circle animation.
