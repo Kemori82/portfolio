@@ -1,0 +1,13 @@
+{
+  "name": "portfolio",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-10-24",
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ethan-portfolio-content",
+      "database_id": "75416a9d-6159-4ab1-a460-cc69d24965e3"
+    }
+  ]
+}
