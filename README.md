@@ -122,3 +122,13 @@ Saving now requires **editor version 8** to protect new fields from an older ope
 The page's **Play when → Page loads** setting now applies to layers whose timing follows the page, including older saved layers that carried an automatic scroll default. A layer's **Play when → Use page timing** makes this explicit. Choosing a different trigger on that layer creates a deliberate override. Existing layer delays and visual effect settings are preserved. **Apply page timing to every layer** clears just the current page's layer trigger overrides.
 
 Returning to Animation keeps the page/layer scope you were editing. The selected layer's quick Animate action still opens that layer. Changing an effect preset preserves your trigger choice. Saving requires editor version 9 to protect the new timing-inheritance field. Download any unsaved draft before refreshing and import it afterward.
+
+### Smooth hover returns and page sections
+
+**Animation → Hover & ambient motion** now includes **Hover easing** and **Return duration**. Leaving a card reverses the current hover animation smoothly; fast pointer re-entry resumes from its current position. Keyboard focus keeps the effect active until focus leaves. Completed effects do not restart just because a hovered card gains focus. Reduced motion and the page animation switch are still respected.
+
+**Content → Insert → + Section** creates an ordered page area. Your current arrangement is preserved as the first section when you add sections to an existing page. **Content → Sections** lets you edit each section's heading, introduction, background color or image/GIF, text color, transparent fill, padding, spacing, minimum height, column count, and grid/single-column/canvas layout. Use the up/down buttons to reorder sections. Removing a section moves its content into another section instead of deleting it.
+
+Choose **Add new content to** in Insert to place new cards, text, media, and lists into a section. Existing content can move between sections from the section's content controls or **Edit selected → Position & size → Section**. Dragging a member converts just its section to canvas layout and leaves other sections alone. Duplicate page copies sections and remaps their content. Section order and content stack on small screens. Up to 30 sections are allowed per page.
+
+Saving requires editor version 10 so an older open editor cannot discard section membership or hover settings. Download any unsaved draft before refreshing, then import it into the updated editor.
