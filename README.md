@@ -97,3 +97,22 @@ The paint background is one continuous viewport layer and no longer tiles. Backg
 **Animation** now uses self-hosted Anime.js 4.5.0 for entrances, with rotate/drop effects, smooth / linear / bounce / elastic easing, finite repeats, and alternating direction. Existing typewriter controls remain available. A Web Animations fallback keeps entrances working if Anime cannot load. **Particle background · this page** uses self-hosted particles.js 2.0.0, with shape, color, count, size, speed, opacity, optional connecting lines, pointer repulsion, and whole-page / edge-only placement. Particle count is capped at 45 on phones. Editing stays still; website preview shows effects. Reduced-motion and the page animation toggle are respected. Both MIT licenses ship at /vendor/anime-LICENSE.txt and /vendor/particles-LICENSE.txt.
 
 This release requires editor version 7 when saving, so an old open editor cannot silently remove newer component data. Export any unsaved draft before refreshing, then import it into the refreshed editor. Publishing the code does not replace saved site content.
+
+### Expanded effects and a simpler editing workspace
+
+The built-in circle-and-triangle **logo** has been removed from the public HTML and editor controls. Existing saved `mark` selections behave as No logo and migrate on the next save. Uploaded and text logos remain available in Pages → Header & page visibility → Logo. Decorative background geometry remains a separate Design setting.
+
+Content now has **Insert**, **Layers**, and **Edit selected** views. Selecting a layer opens its editor, with quick Focus / Animate / Duplicate / Remove actions. The sidebar includes a setting search and Collapse / Expand sections. Canvas tool and icon grid options are under **Canvas options**, leaving page, preview size, and zoom readily available. Logo, header bar/navigation, and page heading controls are grouped separately.
+
+Animation controls are organized into expandable sections:
+
+- **Entrance:** fade, rise/fall, left/right slide, zoom in/out, rotation, drop, horizontal/vertical flip, blur, wipe, roll, skew, and horizontal expansion. Set duration, delay, page stagger, scroll/load/hover/click trigger, and replay on re-entry.
+- **Text:** characters or words; typewriter, fade, rise, wave, zoom, rotation, blur, and Anime.js text scrambling; first/last/center/random stagger; timing, cursor, and scramble character sets.
+- **Easing & playback:** smooth, linear, bounce, elastic, spring, stepped and custom Bezier easing, plus in/out/in-out variants of Quad, Cubic, Quart, Quint, Sine, Expo, Circ, Back, Bounce, and Elastic. Adjust repeats, continuous looping, alternate/reverse playback, playback speed, spring parameters, and curve coordinates.
+- **Transform:** travel distance, rotation angle, starting scale, blur, and transform origin.
+- **Hover & ambient motion:** lift, scale, tilt, wiggle, glow; continuous float, pulse, spin, sway, or drift. Hover effects also respond to keyboard focus; ambient motion pauses offscreen and when the document is hidden.
+- **Particles:** presets, screen/edge/top/bottom placement; circle/square/triangle/star/polygon/image shapes; custom particle images, outline, multiple colors, count/density, size/opacity randomness, movement direction and boundaries, attraction/collisions, connecting lines, grab/bubble/repulse pointer behavior, push/remove/bubble/repulse clicks, twinkle and size breathing, synchronization, and high-resolution rendering.
+
+Use a preset to start, then expand only the groups you need. **Preview animations** runs effects outside editing mode. Reduced-motion settings and the page animation switch are respected. Particles remain capped at 150 on desktop and 45 on small screens, including after clicks and asynchronous image initialization. This is an expanded preset-and-parameter editor; arbitrary scripts and a keyframe timeline are not exposed.
+
+Saving now requires **editor version 8** to protect new fields from an older open editor. Download any unsaved draft backup before refreshing, then import it in the new editor. Saved website content and uploads remain in D1.
