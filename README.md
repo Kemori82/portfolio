@@ -116,3 +116,9 @@ Animation controls are organized into expandable sections:
 Use a preset to start, then expand only the groups you need. **Preview animations** runs effects outside editing mode. Reduced-motion settings and the page animation switch are respected. Particles remain capped at 150 on desktop and 45 on small screens, including after clicks and asynchronous image initialization. This is an expanded preset-and-parameter editor; arbitrary scripts and a keyframe timeline are not exposed.
 
 Saving now requires **editor version 8** to protect new fields from an older open editor. Download any unsaved draft backup before refreshing, then import it in the new editor. Saved website content and uploads remain in D1.
+
+### Page animation timing inheritance fix
+
+The page's **Play when → Page loads** setting now applies to layers whose timing follows the page, including older saved layers that carried an automatic scroll default. A layer's **Play when → Use page timing** makes this explicit. Choosing a different trigger on that layer creates a deliberate override. Existing layer delays and visual effect settings are preserved. **Apply page timing to every layer** clears just the current page's layer trigger overrides.
+
+Returning to Animation keeps the page/layer scope you were editing. The selected layer's quick Animate action still opens that layer. Changing an effect preset preserves your trigger choice. Saving requires editor version 9 to protect the new timing-inheritance field. Download any unsaved draft before refreshing and import it afterward.
