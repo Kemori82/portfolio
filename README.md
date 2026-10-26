@@ -49,7 +49,7 @@ Drag the divider on the left edge of **Site tools** to resize the sidebar. Its k
 
 Use **Cards → Insert content** to add a picture, text section, downloadable file, or code block to the selected card’s popup. With no selection, a new card is created. Card background pictures remain editable under **Picture**. Code blocks display source as text with an optional language label. They do not run custom scripts. Downloads support PDF, text, Markdown, CSV, JSON, ZIP, and source files up to 900 KB each; larger files can use an external HTTPS link. Images and files share the 50 MB media library. Attachments are served as downloads.
 
-This release requires editor version 5 when publishing, to protect the new content fields from older open editor tabs. Export any unsaved draft using **File → Download backup**, refresh the admin page, then import it if needed.
+This release requires editor version 6 when publishing, to protect the new content fields from older open editor tabs. Export any unsaved draft using **File → Download backup**, refresh the admin page, then import it if needed.
 
 
 ### Zoom, shortcuts, and rich media
@@ -72,3 +72,16 @@ Open a card and expand **Card media: picture, carousel, or video**. Choose a sin
 **Design now edits only the page selected above the canvas.** Each page saves its own dark/light palette, background, typography, spacing, layout, animation preferences, and page text. Existing pages retain the previous site design until edited. New page designs start from the site's existing defaults. Duplicating a page copies its design, and restoring a design resets only that page. Name/footer and contact links in Settings remain shared across the site.
 
 The background has additional painted strokes and gently rippling circles. Paint strength and circle visibility are adjustable in the current page's Design tab. Disable **Enable animations & background ripples** to make that page static. Reduced-motion preferences also stop the circle animation.
+
+
+### Standalone text, headers, and Animation
+
+The **Content** tab now starts with a searchable list of the current page's layers. Select one to show its properties. **Focus selected** zooms to that item; **Center page** returns to the whole page. Resizing the sidebar recenters a fitted canvas, and wide property panels keep their controls centered. **Inside a card popup** retains the previous detail-section tools.
+
+**+ Text** adds a standalone text layer. It preserves the visible card arrangement while moving the page into canvas layout. Drag or resize the text like other layers, adjust its typography in Content, or select it and double-click its text to write directly on the canvas. Escape cancels direct editing; Ctrl+Enter finishes it. Pages can have no cards at all. Phone layouts stack text and cards for readability.
+
+**Headers** opens **Pages → Header & page visibility**. The top bar, main page heading, introduction, page navigation, and footer can each be hidden independently. The saved text stays available for later. Individual card headings can also be hidden under Text & behavior.
+
+The **Animation** tab offers fade, rise, side-slide, and soft-zoom entrance effects; duration, start delay, and layer stagger; and typewriter text with adjustable character timing. Apply settings to a page or a selected layer. **Preview animations** opens the website preview. Editing stays static. Effects respect the page's animation setting and reduced-motion preferences. This is a preset animation editor, not a keyframe timeline.
+
+The paint background is one continuous viewport layer and no longer tiles. Background images do not repeat. The editor's mobile layout has a compact publish toolbar and a bottom tools drawer, with touch-friendly controls and scrollable properties. Export any unsaved draft before refreshing an older editor, then import it if needed.
