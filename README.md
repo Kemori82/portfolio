@@ -132,3 +132,11 @@ Returning to Animation keeps the page/layer scope you were editing. The selected
 Choose **Add new content to** in Insert to place new cards, text, media, and lists into a section. Existing content can move between sections from the section's content controls or **Edit selected → Position & size → Section**. Dragging a member converts just its section to canvas layout and leaves other sections alone. Duplicate page copies sections and remaps their content. Section order and content stack on small screens. Up to 30 sections are allowed per page.
 
 Saving requires editor version 10 so an older open editor cannot discard section membership or hover settings. Download any unsaved draft before refreshing, then import it into the updated editor.
+
+### Full-width section bands
+
+Sections now extend across the entire browser width. Their colors and background images reach both edges, sections meet without a gap, and rounded panel edges are removed. The page introduction and header remain centered. This behavior also applies to sections already saved on the site.
+
+In **Content → Sections**, **Content width** chooses between the site's centered content width and using the full section width. The section background is full-width with either choice. **Minimum height only** sets a lower bound; grid and single-column sections grow with their content. Canvas sections also grow to include long text or other content that exceeds a saved frame, and remeasure after content or font sizes change. Small screens continue to stack section contents.
+
+Saving requires editor version 11 to preserve the content-width setting. Export an unsaved draft before refreshing and import it afterward.
