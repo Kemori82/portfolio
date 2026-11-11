@@ -164,3 +164,14 @@ The editor has a new look: a near-black workspace with one accent color (lime by
 Fixes: cards now snap to the grid by their final position, so off-grid cards line up again after a move or resize; resizing near the right edge can no longer push a card past the page; dragging near the edge of a zoomed-in canvas scrolls it; and editing in Preview no longer replays every entrance or rebuilds animated backgrounds and particles on each change. Entrances replay when you switch to Preview or change an animation setting.
 
 No content format changes: saving still uses editor version 12, so an editor that is already open keeps working and shows the new look after a refresh.
+
+
+### Background creator, more animation libraries, and smoother dragging
+
+**Background creator** (Backdrop in the left rail, the Motion or Design panel, or Ctrl+K → “background”) builds a page background from up to six stacked layers with a live preview: animated gradients (Granim.js), aurora glows, particles (tsParticles: stars, snow, links, bubbles, fireflies, confetti, sparkles, hexagons, rain, triangles, embers), 3D scenes (Vanta.js), floating 3D shapes (Zdog), a neon grid, your own picture with parallax, film grain, and a vignette. Each layer has its own opacity, blend mode, colors, speed, and size. Twelve ready-made looks are a starting point. Nothing changes on the page until **Use this background**; publishing then saves it. The canvas shows a still version while editing; Preview and the website show it moving, and visitors who prefer reduced motion get the still version.
+
+**More animations:** 40 classic entrances and 12 looping attention effects from Animate.css (Jack in the box, bounce, light speed, heartbeat, rubber band, and more), and Typed.js “type and retype each line” for headings. All are under Animation for the page or any selected item.
+
+**Dragging:** the editor no longer re-fits the zoom while a card is being dragged (the page used to shrink under the pointer), the dragged card stays on top, one click selects once, and smart guides snap cards to the edges and centers of nearby cards and the page while showing the position. Hold Alt to move freely without any snapping.
+
+All new libraries are MIT licensed and stored under `/vendor`. Saving still uses editor version 12.
