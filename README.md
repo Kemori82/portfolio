@@ -155,3 +155,12 @@ The editor keeps an on-device safety copy of unpublished edits. If the editor is
 All libraries are MIT/ISC licensed, stored under `/vendor` with their licenses, and loaded only on pages that use them. Effects stay off while editing, play in Preview and on the website, and are skipped for visitors who prefer reduced motion. Existing pages keep every effect off until one is chosen.
 
 Saving requires editor version 12. Export an unsaved draft before refreshing an open editor and import it afterward.
+
+
+### Studio Night editor theme and drag/animation fixes
+
+The editor has a new look: a near-black workspace with one accent color (lime by default; **File → Accent** switches to orange, teal, or violet), Space Grotesk headings with Inter text, and a light variant from the theme button. An **icon rail** on the left opens Outline, Add, Layers, Pages, Design, Motion, and Settings. Selecting an item shows its name at the top of the properties panel with **Edit / Arrange / Animate**: Arrange shows position, size, and section; Animate opens its animation settings. A chip next to Publish counts unpublished changes, and the status bar shows where you are, the zoom level, and whether the on-device safety copy is saved. The selection outline on the canvas uses the accent color. On phones the rail is replaced by the tab row and properties open as a bottom sheet.
+
+Fixes: cards now snap to the grid by their final position, so off-grid cards line up again after a move or resize; resizing near the right edge can no longer push a card past the page; dragging near the edge of a zoomed-in canvas scrolls it; and editing in Preview no longer replays every entrance or rebuilds animated backgrounds and particles on each change. Entrances replay when you switch to Preview or change an animation setting.
+
+No content format changes: saving still uses editor version 12, so an editor that is already open keeps working and shows the new look after a refresh.
