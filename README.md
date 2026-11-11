@@ -140,3 +140,18 @@ Sections now extend across the entire browser width. Their colors and background
 In **Content → Sections**, **Content width** chooses between the site's centered content width and using the full section width. The section background is full-width with either choice. **Minimum height only** sets a lower bound; grid and single-column sections grow with their content. Canvas sections also grow to include long text or other content that exceeds a saved frame, and remeasure after content or font sizes change. Small screens continue to stack section contents.
 
 Saving requires editor version 11 to preserve the content-width setting. Export an unsaved draft before refreshing and import it afterward.
+
+
+### Section-first editor and effect libraries
+
+The editor has a new **outline** on the left: page buttons, then each section with its content in order. Click a row to select it, drag content between sections, drag ⠿ to reorder sections, and use **+** on a section to add a card, text, picture, carousel, video, audio, list, embed, download, or code block directly into it. **Outline** above the canvas shows or hides it; on phones and tablets it opens as a drawer.
+
+**Search actions** (Ctrl+K or ⌘K, or /) finds any action, page, layer, tab, animation preset, or page effect by typing. Shortcuts: Ctrl+S publishes, Ctrl+D duplicates the selected layer, Delete removes it (with a confirmation; undo restores it), and ? lists every shortcut. **File → Take the editor tour** walks through the workspace. Messages appear as notifications in the corner, and **Publish changes** shows a dot while there are unpublished edits.
+
+The editor keeps an on-device safety copy of unpublished edits. If the editor is closed or refreshed before publishing, the next visit offers **Restore draft**, **Download it**, or **Discard**. Nothing is restored or published automatically, and the copy is cleared after a successful publish.
+
+**Animation** now has a clickable preset gallery with hover previews, new entrance effects (pop, swing, drop, unfold, glitch), 3D tilt and tilt-with-shine hover effects (vanilla-tilt), click bursts — confetti, stars, fireworks, side cannons, snow (canvas-confetti) — and hand-drawn highlights, underlines, boxes, circles, and brackets (Rough Notation). **Page effects** add WebGL animated backgrounds (Vanta.js with three.js: waves, fog, net, birds, clouds, globe, cells, dots, rings, halo), smooth scrolling (Lenis), a reading progress bar, and cursor glow, trail, or spotlight. Outline dragging uses SortableJS and the tour uses Driver.js.
+
+All libraries are MIT/ISC licensed, stored under `/vendor` with their licenses, and loaded only on pages that use them. Effects stay off while editing, play in Preview and on the website, and are skipped for visitors who prefer reduced motion. Existing pages keep every effect off until one is chosen.
+
+Saving requires editor version 12. Export an unsaved draft before refreshing an open editor and import it afterward.
