@@ -198,7 +198,7 @@ While a page has a background-creator background turned on, the built-in paint t
 
 Cards are no longer the only way to build a page. The **Add** panel is now a searchable gallery of everything you can place: headings, text, buttons, pictures, shapes, dividers, cards, and sections (Basics); photo galleries, slideshows, video, audio, Lottie animations, embeds, and downloads (Media); stats, skill bars, timelines, quotes, FAQs, tags, lists, and code (Content); and countdowns, scrolling text, and a physics toy (Fun). New items appear in the selected section and scroll into view without changing the zoom.
 
-The new blocks come from one schema () that drives the server validation, the settings form, and the defaults. Settings use sliders for numbers, segmented buttons for short choices, switches for on/off, and list editors with add, reorder, and remove. Button links accept https://, mailto:, or a page path such as /p/projects.
+The new blocks come from one schema (`public/blocks.js`) that drives the server validation, the settings form, and the defaults. Settings use sliders for numbers, segmented buttons for short choices, switches for on/off, and list editors with add, reorder, and remove. Button links accept https://, mailto:, or a page path such as /p/projects.
 
 On the canvas, the selected item shows a quick-action bar (Edit, Animate, Duplicate, bring forward, send backward, Delete), right-click selects an item, and text in blocks (button labels, quotes, stat and skill labels, timeline entries, FAQ questions, tags, countdown headings) can be double-clicked and typed in place.
 
