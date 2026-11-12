@@ -175,3 +175,12 @@ No content format changes: saving still uses editor version 12, so an editor tha
 **Dragging:** the editor no longer re-fits the zoom while a card is being dragged (the page used to shrink under the pointer), the dragged card stays on top, one click selects once, and smart guides snap cards to the edges and centers of nearby cards and the page while showing the position. Hold Alt to move freely without any snapping.
 
 All new libraries are MIT licensed and stored under `/vendor`. Saving still uses editor version 12.
+
+
+### Bug fixes and a calmer workspace
+
+Keyboard: shortcuts now work after clicking the canvas (Ctrl+S publishes instead of opening the browser's Save dialog; Delete, Ctrl+D, Ctrl+K, and ? work too). Arrow keys nudge the selected item by 10 (Shift: 50, Alt: 1) on canvas layouts, and Escape or the × in the properties header deselects (the × did nothing before).
+
+Selection: choosing an item in the outline, layer list, or search scrolls the canvas to it when it is off-screen, without changing the zoom. The Animate tab follows the newly selected item instead of showing the previous one. The item header no longer appears on page-level panels (Pages, Design, Settings). The Preview size menu says **Custom zoom** after zooming in, instead of still claiming *Whole page*.
+
+Layout: the canvas controls fit on one row; duplicate controls were removed (the page menu while the outline is open, the theme and hide-toolbar buttons in the top bar, the second Animate button, and the extra content tab row on wide screens). With nothing selected, the right panel shows Add instead of repeating the outline's layer list. A **Sections** button joins the rail. On/off settings are switches, color pickers sit beside their labels, and the phone layout uses one row for the top bar and one for the canvas controls.
