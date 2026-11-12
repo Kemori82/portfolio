@@ -214,3 +214,12 @@ The editor was rebuilt around three areas, in the style of Framer or Webflow:
 - **Properties panel:** changes with the selection. With an item selected it shows the item header (duplicate, delete, deselect), exact X/Y/W/H and section, the item's content and style, and its animation. A selected section shows the section settings. With nothing selected it shows the page, design, page animation and effects, and site settings. Groups collapse and remember it, and the search box filters every visible group.
 
 On the canvas, the selected item has resize grips on all four sides and corners (edges snap to neighbours), and a card's title and text can be double-clicked to edit in place. On phones the canvas comes first and Layers and Properties open as drawers. The editor's look lives in one stylesheet, `public/editor.css`; the old `admin.css`, `editor-theme.css`, and `editor-studio.js` were removed.
+
+
+### Background controls, page menu, and steadier dragging
+
+With nothing selected, the properties panel starts with **Background**: one switch each for the built-in paint texture and outlined shapes, the background creator (with Edit), classic particles, and any 3D or cursor effect, plus **Make it plain** to turn them all off. Turning paint back on restores its previous strength. A creator background now also hides the second paint layer that used to show through.
+
+Click the page name in the top bar to switch pages or add, duplicate, or open page settings; **+ Add** next to it opens the block gallery.
+
+Dragging follows the pointer exactly, snaps to a neighbouring edge only when close and holds that snap until the pointer moves away (so it no longer flickers between nearby lines), and no longer re-attaches every card at the start of a drag.
