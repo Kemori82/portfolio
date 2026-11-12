@@ -189,3 +189,6 @@ Layout: the canvas controls fit on one row; duplicate controls were removed (the
 ### Background particles fixed, lighter on the graphics card
 
 Particle layers in the background creator now draw: tsParticles 3 needs its full feature set registered before use, and without it the particles existed but were invisible. Background layers also do much less work per frame: particles run at 30 fps at screen resolution without blurred shadows, 3D (Vanta) scenes render at 1x even on high-DPI displays, the animated gradient draws on a quarter-size canvas, the aurora uses soft gradients instead of large blur filters, the neon grid moves with a GPU-friendly transform, film grain no longer animates, and floating shapes run at 30 fps. The creator labels each layer's graphics load (light, medium, or heavy) and warns before adding a second 3D layer.
+
+
+While a page has a background-creator background turned on, the built-in paint texture and the outlined circles and triangles are hidden so they do not sit on top of it. Their Design settings are kept, and turning the background off (or hiding all its layers) brings them back.
