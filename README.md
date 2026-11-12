@@ -223,3 +223,10 @@ With nothing selected, the properties panel starts with **Background**: one swit
 Click the page name in the top bar to switch pages or add, duplicate, or open page settings; **+ Add** next to it opens the block gallery.
 
 Dragging follows the pointer exactly, snaps to a neighbouring edge only when close and holds that snap until the pointer moves away (so it no longer flickers between nearby lines), and no longer re-attaches every card at the start of a drag.
+
+## Scroll scenes, item style, dark only
+
+- The site is dark only; light-mode controls were removed (old saved light colours are kept but unused).
+- Animation panel → "Scroll animation": parallax, fade, rise, slide, zoom, spin, blur, wipes, circle reveal, words, or custom; start/finish points, direction, easing.
+- Section panel → "Pin while scrolling": the section holds on screen for the set scroll length so its items' scroll animations play in order.
+- Item properties → "Style": opacity, rotate, corners, blur, shadow, blend.
