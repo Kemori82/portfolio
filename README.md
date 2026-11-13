@@ -230,3 +230,16 @@ Dragging follows the pointer exactly, snaps to a neighbouring edge only when clo
 - Animation panel → "Scroll animation": parallax, fade, rise, slide, zoom, spin, blur, wipes, circle reveal, words, or custom; start/finish points, direction, easing.
 - Section panel → "Pin while scrolling": the section holds on screen for the set scroll length so its items' scroll animations play in order.
 - Item properties → "Style": opacity, rotate, corners, blur, shadow, blend.
+
+## Home page (night sky edition)
+
+The home page is built in code (`public/landing.js`, `landing.css`) from saved content:
+
+- **Hero:** a WebGL night sky over a mountain lake (`night-sky.js`). The aurora pass renders at low resolution, adapted from nimitz's "Auroras" on Shadertoy, licensed CC BY-NC-SA 3.0. The stars, Milky Way, mountains and lake reflection render at full resolution. It caps at 30 fps, pauses off-screen, and lowers its own resolution on slow GPUs.
+- **01 Story:** blocks on a Home card titled "About" become chapters (heading, text, link text as the small label, optional picture). Placeholders show until that card exists.
+- **02 Proportion:** a golden-section construction that draws as you scroll (`studio.js`, `goldenConstruction`).
+- **03 Work:** projects from the Projects card, hung as framed paintings. A project without a picture gets a painted cover.
+- **04 Painting / 05 Music:** a brush canvas, and strings that play Karplus-Strong plucks. A Home card titled "Painting" or "Music" replaces the default text. The soundtrack (`sound.js`) is generated in the browser.
+- **06 Contact:** the first email address and the social links.
+
+Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (`public/vendor`, see `gsap-LICENSE.txt`). The page renders still in the editor canvas and for visitors who prefer reduced motion.
