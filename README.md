@@ -231,14 +231,6 @@ Dragging follows the pointer exactly, snaps to a neighbouring edge only when clo
 - Section panel → "Pin while scrolling": the section holds on screen for the set scroll length so its items' scroll animations play in order.
 - Item properties → "Style": opacity, rotate, corners, blur, shadow, blend.
 
-## Home page (golden spiral)
+## Home page
 
-The home page is built in code (`public/landing.js`, `landing.css`, `motion.js`) from saved content only. Sections with no content are left out.
-
-- **Layout:** every section is a square cut from a golden rectangle, and the later sections nest in the remaining 38.2%. On wide screens, scrolling turns a quarter and zooms by φ into the next square, then settles there. Arrow keys, Page Up/Down and the nav links step one square at a time. On phones, in the editor canvas and with reduced motion, the squares stack vertically instead.
-- **Order:** introduction, Proportion, one square per project, one square per story chapter, then contact.
-- **Motifs:** the WebGL aurora sky (`night-sky.js`) sits behind every section and turns slightly as you move. The spiral is drawn as a constellation line with a star per section. Each square has its own small constellation and star-chart corner marks, and a project without a picture gets a constellation cover. The aurora pass is adapted from nimitz's "Auroras" on Shadertoy, licensed CC BY-NC-SA 3.0.
-- **Editing:** on Home, the editor shows one form (`editor-home.js`): name, intro line, email and links, projects, story chapters, and tab title and description. The left panel lists the sections. Clicking a section on the canvas opens its fields. Projects are blocks on the Home card titled "Projects"; story chapters are blocks on the Home card titled "About", which the form creates when you add the first chapter.
-- **Classic editor switch:** setting `localStorage['portfolio-editor-classic-home']='1'` makes Home use the classic editor. The offline tests use this to keep testing the classic editor that other pages use.
-
-**Loading:** the boot script fetches content immediately and `landing-boot.js` renders the page as soon as it arrives. The old background scene, particles and page effects are skipped on the public home page. Motion uses Lenis only (`public/vendor/lenis.js`).
+The home page is built in code (public/landing.js, landing.css, motion.js) from saved content only. It scrolls normally: hero, Work (projects), Story (if a Home card titled "About" has blocks), Proportion (a pinned golden-spiral construction), Contact. The WebGL aurora sky (night-sky.js) sits fixed behind every section. Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (public/vendor). On Home the editor shows one form (editor-home.js); set localStorage portfolio-editor-classic-home to 1 to use the classic editor there instead (the offline tests do).
