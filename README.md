@@ -233,4 +233,4 @@ Dragging follows the pointer exactly, snaps to a neighbouring edge only when clo
 
 ## Home page
 
-The home page is built in code (public/landing.js, landing.css, motion.js) from saved content only. It scrolls normally: hero, Work (projects), Story (if a Home card titled "About" has blocks), Proportion (a pinned golden-spiral construction), Contact. The WebGL aurora sky (night-sky.js) sits fixed behind every section. Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (public/vendor). On Home the editor shows one form (editor-home.js); set localStorage portfolio-editor-classic-home to 1 to use the classic editor there instead (the offline tests do).
+The home page is built in code (public/landing.js, landing.css, motion.js) from saved content only. It scrolls normally: hero, Work (projects), Story (if a Home card titled "About" has blocks), Proportion (a pinned golden-spiral construction), Contact. The WebGL aurora sky (night-sky.js) sits fixed behind every section. Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (public/vendor). In the editor, clicking Work, Story or Contact on the Home canvas selects the matching card.
