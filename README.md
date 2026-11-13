@@ -231,17 +231,14 @@ Dragging follows the pointer exactly, snaps to a neighbouring edge only when clo
 - Section panel → "Pin while scrolling": the section holds on screen for the set scroll length so its items' scroll animations play in order.
 - Item properties → "Style": opacity, rotate, corners, blur, shadow, blend.
 
-## Home page (night sky edition)
+## Home page (golden spiral)
 
-The home page is built in code (`public/landing.js`, `landing.css`) from saved content only. Sections with no content are left out.
+The home page is built in code (`public/landing.js`, `landing.css`, `motion.js`) from saved content only. Sections with no content are left out.
 
-- **Hero:** your name, the optional "Introduction below your name" line, and your links, over a WebGL night sky (`night-sky.js`). The aurora pass is adapted from nimitz's "Auroras" on Shadertoy, licensed CC BY-NC-SA 3.0. It caps at 30 fps, pauses off-screen, and lowers its own resolution on slow GPUs.
-- **Work:** projects from the Projects card. Pictures are revealed by brush strokes, and a project without a picture gets a painted cover.
-- **Story:** appears once Home has a card titled "About". Each block becomes a chapter.
-- **Proportion:** a golden-section construction that draws as you scroll.
-- **Contact:** the first email address and the social links.
-- **Theme:** painting and music run through the page rather than having their own sections. The dividers between sections are strings (cross them to pluck; you hear them once sound is on), the soundtrack switch sits in the corner, and the aurora brightens with the music.
+- **Layout:** every section is a square cut from a golden rectangle, and the later sections nest in the remaining 38.2%. On wide screens, scrolling turns a quarter and zooms by φ into the next square, then settles there. Arrow keys, Page Up/Down and the nav links step one square at a time. On phones, in the editor canvas and with reduced motion, the squares stack vertically instead.
+- **Order:** introduction, Proportion, one square per project, one square per story chapter, then contact.
+- **Motifs:** the WebGL aurora sky (`night-sky.js`) sits behind every section and turns slightly as you move. The spiral is drawn as a constellation line with a star per section. Each square has its own small constellation and star-chart corner marks, and a project without a picture gets a constellation cover. The aurora pass is adapted from nimitz's "Auroras" on Shadertoy, licensed CC BY-NC-SA 3.0.
+- **Editing:** on Home, the editor shows one form (`editor-home.js`): name, intro line, email and links, projects, story chapters, and tab title and description. The left panel lists the sections. Clicking a section on the canvas opens its fields. Projects are blocks on the Home card titled "Projects"; story chapters are blocks on the Home card titled "About", which the form creates when you add the first chapter.
+- **Classic editor switch:** setting `localStorage['portfolio-editor-classic-home']='1'` makes Home use the classic editor. The offline tests use this to keep testing the classic editor that other pages use.
 
-**Loading:** the boot script fetches content immediately and `landing-boot.js` renders the page as soon as it arrives. The old background scene, particles and page effects are skipped on the public home page.
-
-Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (`public/vendor`, see `gsap-LICENSE.txt`). The page renders still in the editor canvas and for visitors who prefer reduced motion.
+**Loading:** the boot script fetches content immediately and `landing-boot.js` renders the page as soon as it arrives. The old background scene, particles and page effects are skipped on the public home page. Motion uses Lenis only (`public/vendor/lenis.js`).
