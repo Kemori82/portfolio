@@ -233,15 +233,15 @@ Dragging follows the pointer exactly, snaps to a neighbouring edge only when clo
 
 ## Home page (night sky edition)
 
-The home page is built in code (, ) from saved content only. Sections with no content are left out.
+The home page is built in code (`public/landing.js`, `landing.css`) from saved content only. Sections with no content are left out.
 
-- **Hero:** your name, the optional "Introduction below your name" line, and your links, over a WebGL night sky (). The aurora pass is adapted from nimitz's "Auroras" on Shadertoy, licensed CC BY-NC-SA 3.0. It caps at 30 fps, pauses off-screen, and lowers its own resolution on slow GPUs.
+- **Hero:** your name, the optional "Introduction below your name" line, and your links, over a WebGL night sky (`night-sky.js`). The aurora pass is adapted from nimitz's "Auroras" on Shadertoy, licensed CC BY-NC-SA 3.0. It caps at 30 fps, pauses off-screen, and lowers its own resolution on slow GPUs.
 - **Work:** projects from the Projects card. Pictures are revealed by brush strokes, and a project without a picture gets a painted cover.
 - **Story:** appears once Home has a card titled "About". Each block becomes a chapter.
 - **Proportion:** a golden-section construction that draws as you scroll.
 - **Contact:** the first email address and the social links.
 - **Theme:** painting and music run through the page rather than having their own sections. The dividers between sections are strings (cross them to pluck; you hear them once sound is on), the soundtrack switch sits in the corner, and the aurora brightens with the music.
 
-**Loading:** the boot script fetches content immediately and  renders the page as soon as it arrives. The old background scene, particles and page effects are skipped on the public home page.
+**Loading:** the boot script fetches content immediately and `landing-boot.js` renders the page as soon as it arrives. The old background scene, particles and page effects are skipped on the public home page.
 
-Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (, see ). The page renders still in the editor canvas and for visitors who prefer reduced motion.
+Motion uses GSAP 3.13, ScrollTrigger, SplitText and Lenis (`public/vendor`, see `gsap-LICENSE.txt`). The page renders still in the editor canvas and for visitors who prefer reduced motion.
